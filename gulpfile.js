@@ -18,7 +18,6 @@ if (!fs.existsSync(`./src/${currentFile}`)) {
   fs.writeFileSync(filePath, template);
   fs.writeFileSync(`./src/${currentFile}/${currentFile}.scss`, '');
   fs.appendFileSync('./src/app.scss', `\n@import './${currentFile}/${currentFile}';`);
-  console.log('footer');
 }
 
 function browsersync() {

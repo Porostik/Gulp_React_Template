@@ -49,7 +49,6 @@ module.exports = {
           imports = imports.replace(/.\/[a-zA-Z]+\//, '');
         }
         const result = data.split('//imports')[0] + '//imports' + imports;
-        console.log(result);
         fs.writeFile(file.path, result, 'utf8', function (err) {
           if (err) return console.log(err);
         });
